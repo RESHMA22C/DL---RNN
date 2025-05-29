@@ -91,9 +91,6 @@ y_test_tensor = torch.tensor(y_test, dtype=torch.float32)
 train_dataset = TensorDataset(x_train_tensor, y_train_tensor)
 train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
 
-print("Name: Manisha selvakumari.S.S.")
-print("Reg No: 212223220055")
-
 ## Step 2: Define RNN Model
 class RNNModel(nn.Module):
   def __init__(self, input_size=1,hidden_size=64,num_layers=2,output_size=1):
@@ -109,8 +106,6 @@ model = RNNModel()
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = model.to(device)
 
-print("Name: Manisha selvakumari.S.S.")
-print("Reg No: 212223220055")
 
 !pip install torchinfo
 
@@ -288,10 +283,6 @@ plt.legend()
 plt.show()
 print(f'Predicted Price: {predicted_prices[-1]}')
 print(f'Actual Price: {actual_prices[-1]}')
-
-
-torch.save(model.state_dict(), 'Manisha_Ex-5.pt')
-print(f"Model saved successfully!!")
 
 ```
 
